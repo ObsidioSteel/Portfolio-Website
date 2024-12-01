@@ -1,0 +1,11 @@
+/*when the screen size is lower than 1200px,
+remove the desktop navigation bar HTML
+use the hamburger instead (for mobile responsiveness)*/
+@media screen and (max-width: 1200px) {
+    #hamburger-nav {
+        display: flex;
+    }
+    #desktop-nav {
+        display: none;
+    }
+}
