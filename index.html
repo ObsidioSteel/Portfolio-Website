@@ -9,33 +9,75 @@
     <link rel="stylesheet" href="mediaquery.css">
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Shaheed Headley</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contacts">Contacts</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Shaheed Headley</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+    <div id="home" class="page page-0">
+        <nav id="desktop-nav">
+            <div class="logo">
+                <div class="circle"></div>
+                <img src="images\crown.png" alt="A crown with mathematic symbols on it">
             </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contacts" onclick="toggleMenu()">Contacts</a></li>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contacts">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">
+                <div class="circle"></div>
+                <img src="images\crown.png" alt="A crown with mathematic symbols on it">
+            </div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contacts" onclick="toggleMenu()">Contacts</a></li>
+                </div>
+            </div>
+        </nav>
+        <div class="home-info">
+            <div class="home-text">
+                <h1>
+                    <span>Hi there! My name is</span>
+                    <br>
+                    <span class="name">Shaheed Headley</span>
+                </h1>
+                <p>
+                    I'm an aspiring software developer who is interested in AI, <span class="line-break">game development, and full-stack development!</span>
+                </p>
+                <div class="home-buttons">
+                    <a class="home-button" href="https://www.linkedin.com/in/shaheedheadley" target="_blank">Hire Me!</a>
+                    <a class="home-button" href="mailto:shaheedheadley@hotmail.com">Let's Talk!</a>
+                </div>
+            </div>
+            <div class="home-img">
+                <img class="self-pic" src="images\czech_blacksmith_b&w.png">
             </div>
         </div>
-    </nav>
+    </div>
+    <div id="about" class="page page-1">
+
+    </div>
+    <div id="skills" class="page page-2">
+
+    </div>
+    <div id="projects" class="page page-3">
+
+    </div>
+    <div id="contacts" class="page page-4">
+
+    </div>
+    <div class="page page-5">
+        <li><a href="#home">Return to Top</a></li>
+    </div> 
     <script src="script.js"></script>
 </body>
 </html>

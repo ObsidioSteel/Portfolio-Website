@@ -8,4 +8,73 @@ use the hamburger instead (for mobile responsiveness)*/
     #desktop-nav {
         display: none;
     }
+
+    /* HOME PAGE */
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .home-info {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .name {
+        font-size: 2.1rem;
+        background: linear-gradient(90deg, var(--accent2), var(--accent1));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .home-text{
+        padding-top: 3vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .home-text p {
+        padding-top: 1vh;
+        text-align: center;
+    }
+    
+    .home-buttons {
+        justify-content: center;
+        margin-top: 2.5vh;
+        display: flex;
+    }
+    
+    .home-button {
+        text-align: center;
+        font-weight: bold;
+        margin: 8vw;
+        border-radius: 14%/20%;
+        background-color: var(--accent1)
+    }
+    
+    .home-button:hover {
+        color: var(--accent1);
+        text-decoration-color: var(--accent1);
+        background-color: var(--text);
+    }
+    
+    .home-img {
+        align-items: center;
+        padding-top: 3vh;
+        padding-left: 0;
+    }
+    
+    .self-pic {
+        display: flex;
+        width: auto;
+        height: 40vh;
+        outline: 1vh solid var(--accent1);
+        border-radius: 20%/15%;
+    }
+
+    .line-break {
+        display: inline;
+    }
 }

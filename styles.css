@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap');
 
+/*These are color variables that I will be using for styling*/
+:root {
+    /* CSS HEX */
+    --background1: #333232ff;
+    --background2: #494949ff;
+    --text: #dbdbdbff;
+    --accent2: #eec881ff;
+    --accent1: #efac78ff;
+}
+
 /* This affects everything */
 * {
     margin: 0;
@@ -8,6 +18,7 @@
 
 /*This affects the body portion*/
 body {
+    background-color: var(--background2);
     font-family: "Gantari", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -28,11 +39,8 @@ IDs are higher priority than classes,
 use classes for groups, IDs for unique elements
 write all of the css property changes in curly braces*/
 p {
-    color: rgb(0, 0, 0)
-}
-
-a, .btn {
-    transition: all 300ms ease;
+    color: var(--text);
+    font-size: 1.5rem;
 }
 
 nav, .nav-links {
@@ -42,7 +50,7 @@ nav, .nav-links {
 nav {
     justify-content: space-around;
     align-items: center;
-    height: 15vh
+    height: 10vh;
 }
 
 .nav-links {
@@ -51,27 +59,45 @@ nav {
     font-size: 1.5rem;
 }
 
+#desktop-nav {
+    background-color: var(--background1);
+    z-index: 10;
+}
+
 a {
-    color: black;
+    position: relative;
+    color: var(--text);
     text-decoration: none;
-    text-decoration-color: white;
+    transition: all 300ms ease;
 }
 
 /*on link hover*/
-a:hover {
-    color: grey;
-    text-decoration: underline;
-    text-underline-offset: 1.5rem;
-    text-decoration-color: grey;
+#desktop-nav a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 50%;
+    height: 0.1vh;
+    bottom: 0;
+    background-color: var(--accent1);
+    transition: all 300ms ease;
 }
 
-.logo {
-    font-size: 2rem;
+/*on link hover*/
+#desktop-nav a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+/*on link hover*/
+#desktop-nav a:hover{
+    color: var(--accent1);
 }
 
 /*FOR THE MOBILE HAMBURGER MENU*/
 #hamburger-nav {
     display: none;
+    background-color: var(--background1);
 }
 
 .hamburger-menu {
@@ -93,7 +119,7 @@ by adding the name of the tag beside the class*/
 .hamburger-icon span {
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: var(--text);
     transition: all 0.3 ease-in-out;
 }
 
@@ -113,8 +139,6 @@ by adding the name of the tag beside the class*/
     padding: 10px;
     text-align: center;
     font-size: 1.5rem;
-    color: black;
-    text-decoration: none;
     transition: all 0.3 ease-in-out;
 }
 
@@ -148,4 +172,128 @@ by adding the name of the tag beside the class*/
 
 .hamburger-icon span:first-child {
     transform: none;
+}
+
+/* LOGO CSS */
+.circle {
+    position: absolute;
+    width: 7vh;
+    height: 7vh;
+    background-color: var(--accent1);
+    border-radius: 50%;
+}
+
+.circle-small {
+    position: absolute;
+    width: 8vh;
+    height: 8vh;
+    background-color: var(--accent1);
+    border-radius: 50%;
+}
+
+.logo {
+    position: relative;
+    width: 6.2vh;
+    height: 6.2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+/* HEADERS */
+h1 {
+    color: var(--text);
+    font-size: 3.5rem;
+}
+
+h2 {
+    color: var(--text);
+    font-size: 2rem
+}
+
+/* PAGES */
+
+.page {
+    height: 100vh;
+    width: 100%;
+    color: var(--background2);
+    align-items: center;
+}
+
+.page-1, .page-3{
+    background-color: var(--background1);
+}
+
+.page-5 {
+    background-color: var(--background1);
+    height: 40vh;
+    display: flex;
+}
+
+/* HOME PAGE */
+.home-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    font-size: 4.1rem;
+    background: linear-gradient(90deg, var(--accent2), var(--accent1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.home-text p {
+    padding-top: 1vh;
+}
+
+.home-buttons {
+    margin-top: 2.5vh;
+    display: flex;
+}
+
+.home-button {
+    text-align: center;
+    font-weight: bold;
+    padding: 1.5rem;
+    margin-right: 1vw;
+    border-radius: 14%/20%;
+    background-color: var(--accent1)
+}
+
+.line-break {
+    display: block;
+}
+
+.home-button:hover {
+    color: var(--accent1);
+    text-decoration-color: var(--accent1);
+    background-color: var(--text);
+}
+
+.home-img {
+    align-items: center;
+    padding-top: 10vh;
+    padding-left: 10vw;
+}
+
+.self-pic {
+    display: flex;
+    width: auto;
+    height: 70vh;
+    outline: 1vh solid var(--accent1);
+    border-radius: 20%/15%;
 }
