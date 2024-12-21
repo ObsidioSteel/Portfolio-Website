@@ -34,6 +34,10 @@ use the hamburger instead (for mobile responsiveness)*/
         display: flex;
         flex-direction: column;
     }
+
+    .home-text-box {
+        background-color: transparent;
+    }
     
     .home-text p {
         padding-top: 1vh;

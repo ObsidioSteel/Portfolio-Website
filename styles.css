@@ -210,6 +210,7 @@ by adding the name of the tag beside the class*/
 h1 {
     color: var(--text);
     font-size: 3.5rem;
+    z-index: 1;
 }
 
 h2 {
@@ -224,6 +225,7 @@ h2 {
     width: 100%;
     color: var(--background2);
     align-items: center;
+    z-index: -10;
 }
 
 .page-1, .page-3{
@@ -254,6 +256,18 @@ h2 {
 .home-text{
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.home-text-box {
+    width: 42vw;
+    height: 50vh;
+    position: absolute;
+    left: -5vw;
+    top: -8vh;
+    background-color: var(--background1);
+    border-radius: 10%/16%;
+    z-index: -10;
 }
 
 .home-text p {
@@ -297,3 +311,65 @@ h2 {
     outline: 1vh solid var(--accent1);
     border-radius: 20%/15%;
 }
+
+.title-background {
+    width: 10vw;
+    background-color: var(--accent1);
+}
+
+.page-title{
+    text-align: center;
+    justify-content: center;
+    padding: 2vh;
+    width: auto;
+    background-color: var(--accent1);
+}
+
+.page-content {
+    display: flex;
+    justify-content: center;
+    padding: 20vh;
+}
+
+.page-text {
+    display: flex;
+    align-items: center;
+}
+
+/* About me section */
+
+.about-me-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-me-box {
+    background-color: var(--background2);
+    padding: 10vh;
+    border-radius: 10%/16%;
+    width: 60vh;
+    height: 30vh;
+}
+
+#about-me-box p {
+    max-width: 100%;
+}
+
+.about-me-img  {
+    width: 50vh;
+    height: 50vh;
+    margin-left: 10vw;
+    overflow: hidden;
+    outline: 1vh solid var(--accent1);
+    border-radius: 20%;
+    position: relative;
+}
+
+.about-me-img img {
+    position: absolute;
+    width: auto;
+    height: 130%;
+    left: -60%;
+    top: -5%;
+}   
