@@ -234,8 +234,10 @@ h2 {
 
 .page-5 {
     background-color: var(--background1);
-    height: 40vh;
+    height: 10vh;
     display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
 }
 
 /* HOME PAGE */
@@ -256,18 +258,18 @@ h2 {
 .home-text{
     display: flex;
     flex-direction: column;
-    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-text-box {
-    width: 42vw;
-    height: 50vh;
-    position: absolute;
-    left: -5vw;
-    top: -8vh;
+    align-items: center;
+    width: 35vw;
+    height: 30vh;
     background-color: var(--background1);
-    border-radius: 10%/16%;
-    z-index: -10;
+    border-radius: 10%/20%;
+    z-index: 10;
+    padding: 8vh;
 }
 
 .home-text p {
@@ -420,4 +422,41 @@ h2 {
 
 .skill {
     margin: 1vw;
+}
+
+/* Project section */
+
+
+
+/* Contact Me section */
+
+#contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20vh;
+}
+
+.contact-row {
+    padding-top: 10vh;
+    display: flex;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--background1);
+    height: 20vh;
+    width: 10vw;
+    border-radius: 15%/15%;
+    margin-inline: 2vw;
+    padding: 5vh;
+    outline: 1vh solid var(--accent1)
+}
+
+.contact-box img {
+    margin-bottom: 1.5vh;
 }
